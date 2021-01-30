@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="board">
+        <div class="column-header">
+            <h2>Todo
+                <button class="btn" onclick="createCard('todo')"><i class="fa fa-plus"></i></button>
+            </h2>               
+            <div id="todo" class="todo-column">
+            </div>
+        </div>
+        <div class="column-header">
+            <h2>InProgress
+                <button class="btn" onclick="createCard('inprogress')"><i class="fa fa-plus"></i></button> 
+            </h2>
+            <div id="inprogress" class="inprogress-column">        
+            </div>
+        </div>
+        <div class="column-header">
+            <h2>Done
+                    <button class="btn" onclick="createCard('done')"><i class="fa fa-plus"></i></button> 
+            </h2>
+            <div id="done" class="done-column">              
+            </div>
+        </div>
+    </div>
