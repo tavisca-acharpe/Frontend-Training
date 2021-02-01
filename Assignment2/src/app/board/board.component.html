@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="board">
+        <div class="column-header">
+            <h2>Todo
+                <button class="btn" (click)="createCard('todo')"><i class="fa fa-plus"></i></button>
+            </h2>               
+            <div id="todo" class="todo-column">
+                <ng-container *ngFor="let card of cards">
+                    <app-card *ngIf="card.status=='todo'" [card]='card'></app-card>
+                </ng-container>
+            </div>
+        </div>
+        <div class="column-header">
+            <h2>InProgress
+                <button class="btn" (click)="createCard('inprogress')"><i class="fa fa-plus"></i></button> 
+            </h2>
+            <div id="inprogress" class="inprogress-column">   
+                <ng-container *ngFor="let card of cards">
+                    <app-card *ngIf="card.status=='inprogress'" [card]='card'></app-card>
+                </ng-container>     
+            </div>
+        </div>
+        <div class="column-header">
+            <h2>Done
+                    <button class="btn" (click)="createCard('done')"><i class="fa fa-plus"></i></button> 
+            </h2>
+            <div id="done" class="done-column">
+                <ng-container *ngFor="let card of cards">
+                    <app-card *ngIf="card.status=='done'" [card]='card'></app-card>
+                </ng-container>              
+            </div>
+        </div>
+    </div>

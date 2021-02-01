@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="card">
+  <div class="textDiv">
+    {{ card.notes }}
+  </div>
+  <div class="buttonDiv">
+    <button (click)="editCard(card.id)"><i class="fa fa-edit"></i></button>
+    <button (click)="deleteCard(card.id)"><i class="fa fa-close"></i></button>
+    <button (click)="likeCard(card.id)"><i class="fa fa-thumbs-up"></i></button>
+    <div>{{ card.likes }}</div>
+  </div>
+</div>
